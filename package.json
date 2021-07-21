@@ -23,10 +23,24 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "off"
+    },
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
     ]
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "singleQuote": true,
+    "endOfLine": "lf",
+    "jsxSingleQuote": true
   },
   "browserslist": {
     "production": [
@@ -39,5 +53,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "^2.3.2"
   }
 }
