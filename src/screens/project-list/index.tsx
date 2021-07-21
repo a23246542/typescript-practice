@@ -49,6 +49,7 @@ export const ProjectList = () => {
         ];
         resolve(listData);
       }, 100);
+      //@ts-ignore
     }).then((data) => setList(data));
   }, []);
 
@@ -74,9 +75,7 @@ export const ProjectList = () => {
       }, 100);
       // }).then((data:{id:number,name:string}[]) => {
     }).then((data) => {
-      // {id:number,name:string}[]
       setUsers(data);
-      // setUsers(data:{id:number,name:string}[]);
     });
   }, []);
 
